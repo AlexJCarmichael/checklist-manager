@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  completed: false
+  default: MyString
+  'false': MyString
+  poistion: 1
+
+two:
+  body: MyString
+  completed: false
+  default: MyString
+  'false': MyString
+  poistion: 1
