@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav nav-pills">
+      <li role="presentation"><%= link_to "Home", tasks_path%></li>
+      <li role="presentation"><%= link_to "Create a new task", new_task_path %></li>
+    </ul>
+  </div>
+</nav>
+<div class='container'>
+  <%= yield %>
+</div>
 </body>
 </html>
