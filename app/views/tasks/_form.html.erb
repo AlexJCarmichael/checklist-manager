@@ -1,0 +1,13 @@
+
+
+<%= form_for(@task) do |f| %>
+      <div>
+        <div>
+          <%= f.label :body %>
+          <%= f.text_field :body, class: 'input-field title', placeholder: "Don't believe what happens next!" %>
+        </div>
+        <div>
+          <%= f.submit %>
+        </div>
+      </div>
+<% end %>
