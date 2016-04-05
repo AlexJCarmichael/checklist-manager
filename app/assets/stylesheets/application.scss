@@ -16,8 +16,40 @@
 
 body {
   padding-top: 70px;
+  min-height: 20em;
+}
+
+p {
+  font-size: 1.5em;
 }
 
 .navbar {
   background-color: #101D42;
+}
+
+button {
+  a {
+  color: white;
+  }
+}
+
+.btn-default {
+  background-color: #337AB7;
+}
+
+.main-header {
+  color: #6564DB;
+}
+
+.main-body {
+  color: #6564DB;
+}
+
+.main-link {
+  color: #6564DB;
+}
+
+.footer {
+  background-color: #101D42;
+  height: 3.75em;
 }

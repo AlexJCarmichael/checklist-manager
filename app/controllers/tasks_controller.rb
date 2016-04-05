@@ -12,8 +12,9 @@ class TasksController < ApplicationController
   end
 
   def create
+    task_position = Task.all.count + 1
     task = Task.create(body: params[:task][:body])
-    task.position = task.id
+    task.position = task_position
     @task = task
     task.save!
     redirect_to task_path(@task.id)

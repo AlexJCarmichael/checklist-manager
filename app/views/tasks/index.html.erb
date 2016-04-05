@@ -1,5 +1,10 @@
-<h1>What you need to do.</h1>
+<h1 class="main-header">What you need to do</h1>
 
 <% @tasks.each do |task| %>
-<p> <%=task.body%> | <%=task.position%> </p>
+<p class="main-body"> <a class="main-link" href="tasks/<%= task.id %>"> <%=task.body%> </a> | <%=task.position%> </p>
+<div class="btn-group" role="group" >
+  <button type="button" class="btn btn-primary"> <%= link_to "Edit", { controller: "tasks", action: "edit", id: task.id } %> </button>
+  <button type="button" class="btn btn-primary"> <%= link_to "Delete", {:controller => :tasks,
+        :action => 'destroy', :id => task.id }, :method => :delete %> </button>
+</div>
 <% end %>
