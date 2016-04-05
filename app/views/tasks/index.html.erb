@@ -3,8 +3,11 @@
 <% @tasks.each do |task| %>
 <p class="main-body"> <a class="main-link" href="tasks/<%= task.id %>"> <%=task.body%> </a> | <%=task.position%> </p>
 <div class="btn-group" role="group" >
-  <button type="button" class="btn btn-primary"> <%= link_to "Edit", { controller: "tasks", action: "edit", id: task.id } %> </button>
+  <button type="button" class="btn btn-primary"> <%= link_to "Edit", { :controller => :tasks,
+        :action => "edit", id: task.id } %> </button>
   <button type="button" class="btn btn-primary"> <%= link_to "Delete", {:controller => :tasks,
         :action => 'destroy', :id => task.id }, :method => :delete %> </button>
+  <button type="button" class="btn btn-default"> <%= link_to "Complete?", { :controller => :tasks,
+        :action => 'edit', :id => task.id, :completed => true }, :method => :edit %> </button>
 </div>
 <% end %>
