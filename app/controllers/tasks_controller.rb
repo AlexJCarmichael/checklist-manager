@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.order(:id, :position)
+    @tasks = Task.order(:position)
   end
 
   def show
