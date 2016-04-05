@@ -5,6 +5,4 @@
     action: "edit", id: @task.id } %> </button>
   <button type="button" class="btn btn-default"> <%= link_to "Delete", { :controller => :tasks,
         :action => 'destroy', :id => @task.id }, :method => :delete %> </button>
-  <button type="button" class="btn btn-default"> <%= link_to "Complete?", { :controller => :tasks,
-        :action => 'edit', :id => @task.id, :completed => true }, :method => :edit %> </button>
 </div>
